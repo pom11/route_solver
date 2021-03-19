@@ -8,9 +8,8 @@ docker-compose -f docker-compose.yaml up
 
 #test_routes.py
 
-## get_route(point1, point2)
-- returneaza distanta dintre point1 si point2 si traseul de urmat
-- [float(distanta),lista_traseu]
+- get_route(point1, point2) - returneaza distanta dintre point1 si point2 si traseul de urmat
+- get_dm(list_points) - matrice cu distanta dintre toate punctele
 
 #solver.py
 - python solver.py data.sample.yaml
