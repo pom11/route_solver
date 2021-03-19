@@ -2,10 +2,12 @@
  Server optimizare rute - Capacitated Vehicle Routing Problem with Time Windows (CVRPTW)
 
 #DOCKER
+
 docker-compose -f docker-compose.yaml build
 docker-compose -f docker-compose.yaml up
 
 #test_routes.py
+
 ## get_route(point1, point2)
 - returneaza distanta dintre point1 si point2 si traseul de urmat
 - [float(distanta),lista_traseu]
