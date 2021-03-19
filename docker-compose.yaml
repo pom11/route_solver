@@ -1,0 +1,9 @@
+version: '2'
+services:
+  solver:
+    hostname: solver
+    build: ./route_solver
+    restart: always
+    tty: true
+    ports:
+      - "8001:8001"
