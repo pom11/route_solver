@@ -8,6 +8,7 @@ print("Loading romania-latest.osm.pbf")
 router = Router("car",f"{workdir}/romania-latest.osm.pbf","pbf")
 print('Done')
 
+#returneaza distanta si traseul dintre point1 si point2
 def get_route(point1, point2):
 	start = router.findNode(point1[0],point1[1])
 	end = router.findNode(point2[0],point2[1])
@@ -24,10 +25,9 @@ def get_route(point1, point2):
 	else:
 		return([])
 
-point1 = (44.2913,28.5628)
-point2 = (44.2576,28.5586)
 
 
+#DISTANCE MATRIX. matrice cu distanta dintre toate punctele
 def get_dm(list_dm):
 	df = pd.DataFrame([[np.nan]*len(list_dm)]*len(list_dm),index=list_dm,columns=list_dm)
 	for i in range(len(list_dm)):
@@ -40,6 +40,8 @@ def get_dm(list_dm):
 
 	return(df.to_numpy())
 
-# print(get_route(point1,point2))
+point1 = (44.2913,28.5628)
+point2 = (44.2576,28.5586)
+print(get_route(point1,point2))
 
 get_dm([(44.2843769, 28.5568986), (44.2843384, 28.556908), (44.284097, 28.5568624), (44.2837467, 28.556861)])

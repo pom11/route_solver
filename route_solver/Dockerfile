@@ -10,6 +10,9 @@ RUN apt -y install graphviz swig python3-dev python3-wheel python3-setuptools py
 
 RUN pip3 install pyyaml pygraphviz uvloop==0.8.1
 RUN pip3 install -r requirements.txt
+
+RUN wget -O or-tools-6.10.zip https://github.com/google/or-tools/archive/refs/tags/v6.10.zip
+RUN wget http://download.geofabrik.de/europe/romania-latest.osm.pbf
 RUN unzip or-tools-6.10.zip
 RUN cd or-tools-6.10 && make
 RUN python3 -m pip install -U --user ortools==6.10.6025
