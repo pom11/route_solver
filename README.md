@@ -38,7 +38,7 @@ docker-compose -f docker-compose.yaml up
 - index punct de plecare din lista points. 
 
 ```
-curl --silent --location --request POST 'http://192.168.236.211:8001/solve' \
+curl --silent --location --request POST 'http://0.0.0.0:8001/solve' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "depot": 0,
