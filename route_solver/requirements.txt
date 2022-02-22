@@ -3,6 +3,6 @@ secure
 dnspython==1.16.0
 numpy==1.17.2
 pandas==1.0.3
-sanic==19.6.3
+sanic==20.12.6
 Sanic-Cors==0.10.0.post3
 pyroutelib3==1.6.3
